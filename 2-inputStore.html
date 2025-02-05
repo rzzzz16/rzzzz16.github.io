@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .imageContainer{
+               width: 100vw; 
+               height:200px;
+               bottom:140px;
+               display: block;
+               align-items: center;
+               justify-items: center;
+               position:absolute;
+           }
+           .imageContainer img{
+               width: 70px;
+               height:auto;
+               display: block;
+               
+           }
+           body{
+           background-image: url('list.png');
+           background-size:  103% ;    
+           }
+
+           .textContainer{
+            width:300px;
+            display: block;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+            position: absolute;
+            top:300px;
+            font-size:24px;
+           }
+
+           .button{
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            z-index: 10;
+            font-family: Charter;
+            font-size:24px;
+            background-color: rgb(228, 147, 182);
+            border-radius: 10px;
+            border: none;
+           }
+
+           .button:hover{
+            background-color: rgb(242, 194, 219);
+           }
+       </style>
+    </head>
+    <body>
+        
+        <button class="button">Retrive</button>
+        <div class="textContainer"></div> 
+        <div class="imageContainer"></div> 
+    </body>
+    <script>
+        let text = JSON.parse(localStorage.getItem("secretList"))
+        let selectedFilter = localStorage.getItem('selectedFilter');
+        
+        const button=document.querySelector(".button");
+        const textContainer=document.querySelector(".textContainer");
+        const imageContainer=document.querySelector(".imageContainer");
+
+        button.addEventListener("click", () => {
+             
+            imageContainer.innerHTML = ""
+                const filterImage = document.createElement("img");
+                filterImage.src = `movingImages/${selectedFilter}.png`;
+                imageContainer.appendChild(filterImage);
+               
+            textContainer.innerHTML = ""
+             text.forEach(item => {
+                const p = document.createElement("p");
+                p.textContent = item;
+                textContainer.appendChild(p); // Add the paragraph to the container
+            });
+
+            button.style.opacity=0
+        });
+
+    </script>
+</html>

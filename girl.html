@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TeddyBear</title>
+        <style>
+            body{
+                background-image: url(background2.jpg);
+            }
+            .description{
+                font-family: 'Canela';
+                font-size: 65px;
+                margin-left: 800px;
+                margin-top: 230px;
+                color: red;
+                opacity: 0;
+                user-select: none;
+            }
+            .buttonb{
+                width: 60px;
+                margin: 20px;
+            }
+
+            .buttonb:hover{
+                transform: scale(1.05);
+            }
+           
+
+            
+            
+        </style>
+    </head>
+    <body>
+        <a href="index.html"><img class="buttonb" src="buttonb.png"></a>
+        <p class="description">
+            "don't talk to him"
+        </p>
+    </body>
+    <script>
+        const text=document.querySelector(".description")
+        document.body.addEventListener("click", () => { 
+            document.body.style.backgroundImage = "url('background.jpg')";
+            text.style.opacity="1";
+            });
+
+    </script>
+</html>

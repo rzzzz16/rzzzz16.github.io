@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 120px;
+            padding: 20px;
+            margin-top:50px;
+        
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            z-index: 10;
+            user-select: none;
+           
+        }
+        .image-container {
+            width: 180px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; 
+            opacity: 0;
+          
+        }
+        .imageNoChange{
+            width: 280px;
+            height: 200px;
+            border-radius: 10px;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .imageNC{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            user-select: none;
+           
+        }
+
+        .text-container{
+            width:1000px;
+            height:30px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: absolute;
+            bottom:270px;
+        }
+
+        .text{
+           font-size: 24px;
+           font-family: Charm;
+           user-select: none;
+        }
+
+        .buttonb{
+        width: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        user-select: none;
+        z-index: 9999;
+        }
+
+        .buttonb:hover{
+        transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 8 Duplicated Images -->
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="imageNoChange"><img src="movingImages/bnoMove.png" class="imageNC"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    <div class="image-container"><img src="movingImages/pop7.png" alt="Auto Image"></div>
+    
+    <div class="text-container"><p class="text">I keep learning, keep perfecting this "Friend" function…
+    </p></div>
+
+   
+
+    <audio id="phoneSound" src="phone.wav"></audio>
+    <audio id="alertSound" src="alertSound.mp3"></audio>
+    <a href="3-mainpage.html" id="buttonLink">
+        <img class="buttonb" src="buttonb.png">
+    </a>
+    <script src="2-lastAnimation.js"></script>
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="2-water.css">
+</head>
+<body>
+
+    <div id="faceMeshContainer">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/p5.min.js"></script>
+        <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+        
+        <script src="2-water.js"> </script>
+    </div>
+    <div class="moveContainer">
+        <img src="movingImages/move1.png" class="movingImage" data-modal-src="movingImages/letter1.png">
+        <img src="movingImages/move2.png" class="movingImage" data-modal-src="movingImages/card.png">
+        <img src="movingImages/move3.png" class="movingImage" data-modal-src="movingImages/email.png">
+        <img src="movingImages/move4.png" class="movingImage" data-modal-src="movingImages/doodle.png">
+        <a href="memes/page1.html"><img class="movingImage" src="movingImages/move5.png"></a>
+    </div>
+    <div class="imageContainer">
+        <img class=sound src="sound.PNG">
+        <img class=video src="video.PNG">
+        <img class=close src="close.PNG">
+
+    </div>
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <button class="closeImg" onclick="closeModal()">&times;</button>
+        <img id="modalImage" class="modal-content">
+    </div>
+
+    <div class="textbox">
+        <img src="movingImages/box2.png" class="box">
+       <div class="text">
+            "We’ve been teleported to a new place! Why are there so many weird little things floating on the water here? I wonder what those are...
+        </div> 
+    </div>
+    
+    <div class="userbox">
+        <img src="movingImages/userbox.png" class="box2">
+        <div class="usertext">
+            Let me check… Oh no, mine isn’t here! What should I do now?!
+        </div>
+   
+    </div>
+    <script src="2-watermove.js"> </script>
+
+
+   
+</body>
+</html>

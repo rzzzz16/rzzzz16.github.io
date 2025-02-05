@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TeddyBear</title>
+        <link rel="stylesheet" href="bearstyle.css">
+    </head>
+    <body>
+        <style>
+           body{
+                background-image: url(girlbg.png)
+            }
+ 
+        </style>
+        <a href="index.html"><img class="buttonb" src="buttonb.png"></a>
+        <img class="picture" src="doll.png">
+        <p class="description">
+            "Hello there! You are my 00043 visitor!"
+             
+        </p>
+        <button class="button">Okay</button>
+         
+    </body>
+       
+    <script>
+
+        const p1=document.querySelector(".description")
+        const button=document.querySelector(".button")
+        const picture=document.querySelector(".picture")
+            
+        let clickCount=0
+
+            picture.addEventListener("click", () => { 
+                if(clickCount===0){
+                p1.innerHTML="My name is Mary, and I’m a lovely doll with beautiful dresses! I love doodling, road trip, and spending time with friends! My biggest fear is grown up and go to work. I’m the best at offering gentle advice, and remembering every thing you whisper to me. I’m here to bring magic, giggles, and friendship wherever I go. 🌸✨";
+            }else if(clickCount===1){
+                p1.innerText="Could you please tell me something about yourself? So we can know each other better!!!";
+                p1.style.fontSize="30px";
+                p1.style.marginLeft="330px";
+                p1.style.marginRight="330px";
+            }else if(clickCount===2){
+            }
+            clickCount++
+        });
+
+    </script>
+</html>

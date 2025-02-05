@@ -1,0 +1,149 @@
+body{
+    background-image: url('waterbg.png');
+    overflow: hidden;
+    }
+    
+    .closeImg{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        cursor: pointer;
+    
+    }
+    
+    .faceMeshContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    
+
+    .moveContainer {
+        position: absolute;
+        width: 100vw; /* Full screen width */
+        height: 300px; /* Adjust height as needed */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Start images from the left */
+        overflow: hidden; /* Hide images moving out of bounds */
+        border:none;
+        top: 55%;
+        transform: translateY(-60%); 
+        
+    }
+    
+    .movingImage {
+        width: 100px; /* Adjust image size */
+        margin-right: 20px; /* Space between images */
+        position: relative; /* Allow independent positioning */
+        transition: transform 0.3s linear; /* Smooth transition for movement */
+        
+    }
+    .movingImage:hover {
+        transform: scale(1.8);
+    }
+
+    .imageContainer {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr); /* Three equal columns */
+        gap: 10px;  /* Align images vertically */
+        position: absolute;
+        bottom: 10px;
+        width: 350px;
+        height: 100px;
+        border: 2px solid black;
+        background-color: rgb(228, 240, 208);
+        z-index: 20;
+    }
+    .sound, .video,.close{
+     width: 90px;
+     height: auto;
+     margin: 10px;
+    
+    }
+
+    .modal-content {
+        max-width: 80%;
+        max-height: 80%;
+        border: 2px solid white;
+        box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .textbox{
+        width:1300px;
+        height:200px;
+        bottom:0px;
+        right:100px;
+        position:absolute;
+        display: flex;
+        border: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box{
+        width:1000px;
+        height:auto;
+        position:absolute;
+        bottom:20px
+    }
+
+    .text{
+        width:920px;
+        height:120px;
+        bottom:100px;
+        position:absolute;
+        border: none;
+        user-select: none;
+        font-family: Charter;
+        font-size: 24px;
+    }
+
+    .userbox{
+        width:600px;
+        height:200px;
+        top:80px;
+        left:280px;
+        right:100px;
+        position:absolute;
+        display: flex;
+        border:none;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .box2{
+        width:600px;
+        height:auto;
+        position:absolute;
+        top:30px;
+        opacity:0;
+    }
+
+    .usertext{
+        width:450px;
+        height:110px;
+        left:120px;
+        top:50px;
+        position:absolute;
+        border: none;
+        user-select: none;
+        font-family: Charter;
+        font-size: 24px;
+        opacity:0;
+    }

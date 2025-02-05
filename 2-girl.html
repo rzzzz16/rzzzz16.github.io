@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TeddyBear</title>
+        <style>
+            body{
+                background-image: url('background3.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            }
+            .description{
+                font-family: 'Canela';
+                font-size: 65px;
+                margin-left: 800px;
+                margin-top: 100px;
+                color: red;
+                opacity: 1;
+            }
+            .button{
+                opacity: 0;
+                font-family: 'Times New Roman';
+                font-size: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                background-color: rgb(212, 95, 95);
+            }
+            .button:hover{
+                transform:scale(1.3)
+            }
+        </style>
+    </head>
+    <body>
+        <p class="description">
+            "don't talk to him"
+        </p>
+        <button class="button">...But I did!!!!</button>
+    </body>
+    <script>
+        const button = document.querySelector('.button');
+        document.body.addEventListener("click", () => { 
+            button.style.opacity="1";
+            });
+        button.addEventListener("click", () => {
+            window.location.href = "2-girlspeak.html";
+            });
+    </script>
+</html>

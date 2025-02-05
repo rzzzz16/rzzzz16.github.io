@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="2-facemesh.css">
+    <style>
+        .block{
+            background-image: url('door.png');
+            background-size: cover;   /* Ensures the image covers the entire page */
+            background-position: center; 
+        }
+        .textbox{
+            opacity:0;
+        }
+        .message{
+            opacity:0;
+        }
+
+        .doorB{
+            font-family: 'charter';
+            font-size: 20px;
+            padding: 10px; /* Adjust button padding */
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            opacity: 0.2;
+        }
+    
+        .bD{
+            width: 1250px;
+            height: 50px;
+            display: flex;  
+            justify-content: center; 
+            position: absolute;
+            top: 300px;
+            border:none;
+            user-select: none;
+            z-index: 30;
+            gap:350px;
+            opacity:0;
+            
+        }
+        .doorB:hover {
+            background-color: #f8f5ee;
+            color:blue;
+            transform: scale(1.05);
+            opacity:1;
+        }
+
+        /* 点击效果 */
+        .doorB.clicked {
+            background-color: #b866a5; /* 变暗颜色 */
+            transform: scale(0.9); /* 点击时缩小 */
+        }
+    </style>
+</head>
+<body>
+    <div id="faceMeshContainer">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/p5.min.js"></script>
+        <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+        <script src="2-facemesh.js"> </script>
+    </div>
+
+    
+    <div class="imageContainer">
+        <img class=sound src="sound.PNG">
+        <img class=video src="video.PNG">
+        <img class=close src="close.PNG">
+
+    </div>
+
+   
+      
+    <div class="block">
+        <img src="box.png" class="textbox">
+        <div id="message" class="message">
+            Whoa, these doors—-where did they pop up from? We've been walking through empty spaces this whole time and now... This is straight-up creepy. Want to check tmem out? Maybe they'll take us to some new places. Which one should we choose?
+                
+        </div>
+        <div class="bD">
+            <button class="doorB" disabled data-link="2-water.html">💎</button>
+            <button class="doorB" disabled data-link="2-water.html">🎀</button>
+            <button class="doorB" disabled data-link="2-water.html">🔫</button>
+
+        <script src="2-fmDoor.js"></script>
+        </div>
+
+
+    </div>
+    
+   
+</body>
+</html>

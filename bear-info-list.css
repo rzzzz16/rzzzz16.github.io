@@ -1,0 +1,46 @@
+body{
+background-image: url('list.png');
+background-size:  103% ;    
+
+}
+
+.secretList{
+    margin-top: 300px;
+    display: flex;
+    align-items: center; /* Keeps input and button aligned on the same line */
+    justify-content: center; /* Centers everything horizontally */
+    gap: 10px;
+    
+}
+.secret-showup{
+    margin-left:700px;
+    margin-top:0px;
+}
+
+input::placeholder{
+    font-family: "Charter";
+    font-size:20px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+button{
+    font-family: "Charter";
+    width: 50px;
+    height: 35px;
+    font-size: 15px;
+    padding-right:10px;
+    padding-top:5px;
+    background-color: rgb(236, 148, 228);
+    border-color: blanchedalmond;
+    text-align: center;
+}
+
+.buttonDone{
+    display:none
+}
+
+input{
+    width: 200px;
+    height: 30px;
+}

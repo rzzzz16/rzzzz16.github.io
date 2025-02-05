@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .dialog-box {
+            width: 300px;
+            margin: 20px;
+            color: black;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+          }
+          .dialog-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+          }
+          .dialog-box .text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 20px;
+            width: calc(100% - 40px);
+            text-align: left;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="dialog-box" id="dialogBox">
+            <img src="box.png">
+            <div class="text">点我获取惊喜</div>
+        </div>
+
+        <script>
+            const imagePaths = [
+            "fur.jpg",]
+
+            // 准备一组对话内容
+            const messages = [
+              "aaaaaaa",
+              "bbbbb",
+              "ccccc",
+              "继续加油，你正在做得很棒！",
+              "每一天都是新的开始！",
+              "勇敢追逐你的梦想吧！",
+              "生活中的小事也值得感恩哦！"
+            ];
+        
+            // 获取对话框元素
+            const dialogBox = document.getElementById('dialogBox');
+        
+            let currentIndex = 0;
+            
+            dialogBox.addEventListener('click', () => {
+              // 随机获取一条消息
+              const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+              // 更新对话框内容
+              dialogBox.textContent = randomMessage;
+            });
+            </script>
+    </body>
+
+
+
+  </html>

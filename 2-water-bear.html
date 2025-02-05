@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="2-water.css">
+    <style>
+        .textbox{
+            width:600px;
+            height:200px;
+            right:300px;
+            bottom:130px;
+        }
+        .bear{
+            width: 200px;
+            height: auto;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%); /* This will center the bear */
+            z-index: 10   
+        }
+        .box{
+            width:600px;
+            height:auto;
+            opacity:0;
+            display: flex;
+        }
+
+        .text{
+            width:560px;
+            height:100px;
+            top:50px;
+            opacity:0;
+        }
+
+        .red-bold{
+            font-weight: bold;
+            color: red;}
+
+        .trash{
+            width:100px;
+            height:auto;
+            position:absolute;
+            display:flex;
+            right:400px;
+            top:150px;
+            opacity:0;
+            transition: opacity 0.8s;
+        }
+      
+        .trash:hover {
+        transform: scale(1.1);
+    }
+         .popup {
+            display: none;
+            position: fixed;
+            top: 30%;
+            left: 70%;
+            background-color: rgb(250, 217, 234);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            z-index: 1000;
+            padding-bottom: 100px;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 10px;
+            width: auto;  /* Allow width to adjust */
+            max-width: 80%; /* Prevent it from getting too big */
+            height: auto; /* Allow height to adjust */
+            max-height: 80vh; /* Prevent it from taking up too much space */
+            overflow: auto; /* Add scroll if content overflows */
+            text-align: center;
+        }
+        .popup button {
+            z-index: 10;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 999;
+        }
+
+        .imageContain{
+               width: 70px; 
+               display: block;
+               align-items: center;
+               justify-items: center;
+               position:absolute;
+           }
+        .imageContain img{
+                max-width: 100%;
+               height:auto;
+               display: block;}
+
+        .textContain{
+            width: 100%;
+            padding-top: 0; /* Ensure there's no extra padding from the top */
+            margin-top: 0;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+           }
+
+    </style>
+</head>
+<body>
+
+    <div id="faceMeshContainer">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/p5.min.js"></script>
+        <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+        
+        <script src="2-water.js"> </script>
+    </div>
+
+    <div class="moveContainer">
+        <img src="movingImages/bhbath.png"  class="bear">
+    </div>
+    <div class="imageContainer">
+        <img class=sound src="sound.PNG">
+        <img class=video src="video.PNG">
+        <img class=close src="close.PNG">
+
+    </div>
+
+    <div class="textbox">
+        <img src="movingImages/box3.png" class="box">
+       <div class="text">
+            Well, well, well. Look who’s here. Looking for your stuff? Here you go! Take it. 
+        </div> 
+    </div>
+    
+
+    <div class="userbox">
+        <img src="movingImages/userbox.png" class="box2">
+        <div class="usertext">
+            "You are such a CREEPER?! YOU LIER!!!! What did you do with my information?!"
+        </div>
+   
+    </div>
+    
+    <img src="movingImages/trash.png" class="trash" onclick="showPopup()">
+    <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+
+    <div class="popup" id="popup">
+        <button class="Rbutton">Retrive</button>
+        <div class="textContain"></div> 
+        <div class="imageContain"></div> 
+    </div>
+
+
+    
+    <script src="2-water-bear.js"></script>
+
+
+   
+</body>
+</html>

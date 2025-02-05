@@ -1,0 +1,39 @@
+body{
+    background-image: url(fur.jpg);
+}
+ 
+.picture{
+    width: 550px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.description{
+    font-family: 'Charm';
+    font-size: 25px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+.buttonb{
+    width: 60px;
+    margin: 20px;
+  }
+
+  .buttonb:hover{
+    transform: scale(1.05);
+  }
+.button{
+    opacity: 0;
+    font-family: 'Charm';
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: rgb(212, 95, 187);
+}

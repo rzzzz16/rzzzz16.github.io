@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NiceGirl</title>
+        <style>
+            .talk{
+                font-family: 'Times New Roman';
+                font-size: 25px;
+                margin-left: 400px;
+                margin-right: 400px;
+                margin-bottom: 20px;
+                text-align: center;
+                user-select: none;
+            }
+            .button{
+                opacity: 0;
+                font-family: 'Times New Roman';
+                font-size: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                background-color: rgb(212, 95, 187);
+                user-select: none;
+             }
+
+             .girl{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 200px;
+                margin-bottom: 0;
+                width: auto; 
+                height: 400px; 
+                display: block;
+                user-select: none;
+            }
+
+            .imageContainer {
+                display: flex;         /* Use flexbox for layout */
+                flex-direction: column; /* Stack items vertically */
+                align-items: center;   /* Center images horizontally */
+                gap: 10px;             /* Add spacing between images */
+                justify-content: center;
+                width: 100px;
+                height: 400px;
+                border: none;
+                position:fixed;
+                top: 20%;
+                right: 500px; /* Positioned on the right side of the screen */
+            
+    
+            }
+            .filterImage {
+                width: 50px;
+                height: auto;
+                cursor: pointer;
+                border: 2px solid transparent;
+                transition: transform 0.2s, border-color 0.2s;
+                opacity:0;
+                user-select: none;
+            }
+
+            .filterImage:hover {
+                transform: scale(1.2);
+            }
+
+            .filterImage.selected {
+                border-color: blue;
+}
+        </style>
+    </head>
+    <body>
+        <img class="girl" src="2-girl.png">
+        <p class="talk">
+            "So...so you did talk to him..."
+             
+        </p>
+        <button class="button">Let's go!</button>
+
+        <div class="imageContainer">
+            <img src="movingImages/filter1.png" class="filterImage" data-id="filter1">
+            <img src="movingImages/filter2.png" class="filterImage" data-id="filter2">
+            <img src="movingImages/filter3.png" class="filterImage" data-id="filter3">
+            <img src="movingImages/filter4.png" class="filterImage" data-id="filter4">
+        </div>
+       
+            
+        <script src="2-girlspeak.js"></script>
+    </body>
+</html>

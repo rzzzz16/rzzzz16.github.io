@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TeddyBear</title>
+        <style>
+            body{
+                background-color: antiquewhite;
+                font-family: 'Canela';
+                color: rgb(78, 6, 95);
+            }
+        .first-line{
+            font-size: 40px;
+            margin-top: 50px;
+            margin-bottom: -20px;
+            padding-left: 30px;
+            
+        }
+         .second-line{
+
+            font-size: 60px;
+            padding-left: 30px;
+            padding-right: 30px;
+            line-height: 120px;
+            margin-bottom: 0;
+            margin-top: 0;
+           
+            
+         }
+
+         .picture{
+            width: 350px;
+            margin-left: auto;
+            margin-top: 90px;
+            display: block;
+        }
+
+        .speakb{
+            font-size: 20px;
+            font-family: 'Canela';
+            margin-right: 560px;
+            margin-top: 270px;
+            float: right;
+            opacity: 0;
+        }
+
+        .speakg{
+            font-size: 20px;
+            font-family: 'Canela';
+            margin-right: -20px;
+            margin-top: 150px;
+            float: right;
+        }
+        .link{
+            opacity: 0;
+        }
+        </style>
+    </head>
+    <body>
+        <p class="first-line">"spy on your secrets..."</p>
+        <p class="second-line">
+            Welcome to Mary's blog
+        </p>
+        <div class="link">
+            <a class="speakb" href="" 
+            >&#8592;
+            </a>
+
+            <a class="speakg" 
+            href="3-girl.html" 
+            >&#8592;yeah it's me!
+            </a>
+        </div>
+        <img class="picture" src="girl3.png">
+
+        
+    </body>
+    <script>
+        const link=document.querySelector(".link")
+        document.body.addEventListener("click", () => { 
+            link.style.opacity="1";
+        });
+
+    </script>
+</html>
